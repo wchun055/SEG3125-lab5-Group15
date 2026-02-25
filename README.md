@@ -1,4 +1,7 @@
 # SEG3125-lab5-Group15
+
+Hairdresser/barbershop page revisited. (New icons, new styling, etc.)
+
 Group 15:
 
 Winona Chung (300298148)
