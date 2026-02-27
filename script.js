@@ -6,8 +6,18 @@ function moveUser(eventName){
 const form = document.getElementById("booking-form");
 form.addEventListener('submit', function(Event){
     Event.preventDefault();
+    startPayment();
+});
+
+const paymentForm = document.getElementById("payment-form");
+paymentForm.addEventListener('submit', function(Event){
+    Event.preventDefault();
     makeBooking();
 });
+
+function startPayment(){
+    document.getElementById("popup").style.display = "block";
+}
 
 function makeBooking(){
     nameForm = document.getElementById("name-form");
@@ -39,6 +49,7 @@ function makeBooking(){
     }
     form.reset();
     alert("Booking Successful!");
+    document.getElementById("popup").style.display = "none";
     document.getElementById("clearBttn").hidden = false;
     document.getElementById("editBttn").hidden = false;
 }
