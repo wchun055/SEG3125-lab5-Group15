@@ -21,10 +21,11 @@
         <p class="lead">Mon - Sun 8AM – 6PM</p>
     </div>
 
-    <div class="tab d-flex flex-column w-50">
-        <button class="tablinks btn btn-lg btn-light m-3" onclick="moveUser('Barbers')">Barber Profiles</button>
-        <button class="tablinks btn btn-lg btn-light m-3" onclick="moveUser('Haircuts')">Haircuts / Services</button>
-        <button class="tablinks btn btn-lg btn-light m-3" onclick="moveUser('Booking')">Book Your Cut</button>
+    <!-- <div class="tab d-flex flex-column w-50 sticky-top"> -->
+    <div style="position: fixed; left: -10px;" class="tab d-flex flex-column me-auto  sticky-top">
+        <button class="tablinks btn btn-lg btn-light m-3" onclick="moveUser('Barbers')">Barber Profiles</button><br>
+        <button class="tablinks btn btn-lg btn-light m-3" onclick="moveUser('Haircuts & Services')">Haircuts / Services</button><br>
+        <button class="tablinks btn btn-lg btn-light m-3" onclick="moveUser('Booking')">Book Your Cut</button><br>
     </div>
 
     <!-- Barber Profiles -->
@@ -142,12 +143,22 @@
                     <input class="form-control m-1" type="text" id="name-form" name="contact" required><br>
 
                 <label class="form-label lead" for="contact">Phone Number:</label><br>
-                    <input class="input-group w-50 m-1" type="tel" id="phone-number-form" name="contact" required><br>
+                    <input class="input-group w-50 m-1" type="tel" id="phone-number-form" name="contact" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890" required><br>
 
                 <label class="form-label lead" for="contact">Optional Notes:</label><br>
                     <textarea class="form-control m-1" type="text" rows="3" id="notes-form" name="contact" placeholder="Allergies, etc"></textarea><br>
-                <button type="submit" class="btn btn-light align-self-center m-3" onsubmit="makeBooking()">Book Now</button><br>
+                <button type="submit" class="btn btn-light align-self-center m-3" onsubmit="startPayment()">Book Now</button><br>
+            </form>
+        </div>
+    </div>
 
+    <div class="modal card w-75 m-3" id="popup">
+        <div class="modal-content card-body d-flex flex-column align-items-center">
+            <h5 class="display-7">Payment Information:</h5><br>
+            <label class="form-label lead" for="contact">Credit Card Number:</label><br>
+            <form id="payment-form">
+                <input class="input-group w-50 m-1" type="tel" id="credit-card-form" name="contact" pattern="^4[0-9]{12}(?:[0-9]{3})?$" required><br>
+                <button type="submit" class="btn btn-light align-self-center m-3" onsubmit="makeBooking()">Book Now</button><br>
             </form>
         </div>
     </div>
