@@ -10,6 +10,8 @@ John Vitor Lopes (300319245)
 
 Rachel Olugbemiro (300302892)
 
-*Icons were added to the services, experts, payment, address, and user contact information
+Notes:
+
+*Icons were added to the services, experts, payment, address, and user contact information.
 
 ## Link:
