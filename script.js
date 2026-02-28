@@ -16,7 +16,8 @@ paymentForm.addEventListener('submit', function(Event){
 });
 
 function startPayment(){
-    document.getElementById("popup").style.display = "block";
+    const modal = new bootstrap.Modal(document.getElementById('popup'));
+    modal.show();
 }
 
 function makeBooking(){

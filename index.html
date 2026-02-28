@@ -48,7 +48,7 @@
     </div>
 
     <!-- Haircut Types -->
-    <div class="card w-75 m-5">
+    <div class="card w-50 m-5">
         <div id="Haircuts & Services" class="tabcontent m-3 card-body d-flex flex-column align-items-center">
             <h3 class="display-6"> <i class="bi bi-scissors me-2"></i>Haircuts / Services</h3>
 
@@ -100,9 +100,9 @@
     </div>
 
     <!-- Booking Information -->
-    <div class="card w-75 m-3">
+    <div class="card w-50 m-3">
         <div id="Booking" class="tabcontent card-body">
-            <h2 class="card-title display-6"> <i class="bi bi-credit-card-fill me-2"></i>Book Your Cut</h2>
+            <h2 class="card-title display-6"> <i class="bi bi-calendar me-2"></i>Book Your Cut</h2>
             <form id="booking-form" class="d-flex flex-column">
 
                 <label class="form-label lead" for="barber">Choose your barber:</label><br>
@@ -142,25 +142,33 @@
 
                 <label class="form-label lead" for="contact">Optional Notes:</label><br>
                     <textarea class="form-control m-1" type="text" rows="3" id="notes-form" name="contact" placeholder="Allergies, etc"></textarea><br>
-                <button type="submit" class="btn btn-light align-self-center m-3" onsubmit="startPayment()">Book Now</button><br>
+                <button type="submit" class="btn btn-light align-self-center m-3" onsubmit="startPayment()">Proceed to Payment</button><br>
             </form>
         </div>
     </div>
 
-    <div class="modal card w-75 m-3" id="popup">
-        <div class="modal-content card-body d-flex flex-column align-items-center">
-            <h5 class="display-7">Payment Information:</h5><br>
-            <label class="form-label lead" for="contact">Credit Card Number:</label><br>
-            <form id="payment-form">
-                <input class="input-group w-50 m-1" type="tel" id="credit-card-form" name="contact" pattern="^4[0-9]{12}(?:[0-9]{3})?$" required><br>
-                <button type="submit" class="btn btn-light align-self-center m-3" onsubmit="makeBooking()">Book Now</button><br>
-            </form>
+    <div class="modal" id="popup" tabindex="-1">
+        <div class="modal-dialog">
+             <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="display-7"> <i class="bi bi-credit-card-fill me-2"></i>Payment Information:</h5>
+                    <button type="button" data-bs-dismiss="modal" aria-label="Close" class="btn-close"></button>
+                </div>
+
+                <div class="modal-body">
+                    <label class="form-label lead" for="contact">Credit Card Number:</label><br>
+                    <form id="payment-form">
+                        <input class="input-group" type="tel" id="credit-card-form" name="contact" pattern="^4[0-9]{12}(?:[0-9]{3})?$" placeholder="Number must start with 4, have 12/16 digits." required><br>
+                        <button type="submit" class="btn btn-light align-self-center m-3" onsubmit="makeBooking()" data-bs-dismiss="modal">Book Now</button><br>
+                    </form>
+                </div>
+            </div>
         </div>
     </div>
 
-    <div class="card w-75 m-5">
+    <div class="card w-50 m-5">
         <div class="card-body d-flex flex-column">
-            <p class="display-7">Your Booking Details:</p>
+            <p class="display-7"> <i class="bi bi-calendar-check me-2"></i> Your Booking Details:</p>
             <p id="name"></p>
             <p id="phone-number"></p>
             <p id="barber"></p>
@@ -171,17 +179,17 @@
             <button onclick="clearBooking()" class="btn btn-light align-self-center m-3" id="clearBttn" hidden>Cancel Booking</button>
             <button onclick="editBooking()" class="btn btn-light align-self-center m-3" id="editBttn" hidden>Edit Booking</button>
         </div>
+        </div>
     </div>
 
     <div class="d-flex justify-content-end w-100 m-3">
         <p class="display-7">Created by Group 15: Winona, John, Rachel</p>
     </div>
 
-     <!-- <div class="tab d-flex flex-column w-50 sticky-top"> -->
-    <div style="position: fixed; left: -10px;" class="tab d-flex flex-column me-auto  sticky-top">
-        <button class="tablinks btn btn-lg btn-light m-3" onclick="moveUser('Barbers')">Barber Profiles</button><br>
-        <button class="tablinks btn btn-lg btn-light m-3" onclick="moveUser('Haircuts & Services')">Haircuts / Services</button><br>
-        <button class="tablinks btn btn-lg btn-light m-3" onclick="moveUser('Booking')">Book Your Cut</button><br>
+    <div style="position: fixed; left: 10px;" class="tab d-flex flex-column me-auto  sticky-top">
+        <button class="tablinks btn btn-lg btn-light m-3" onclick="moveUser('Barbers')"> <i class="bi bi-person-badge"></i> Barber Profiles</button><br>
+        <button class="tablinks btn btn-lg btn-light m-3" onclick="moveUser('Haircuts & Services')"> <i class="bi bi-scissors"></i> Haircuts / Services</button><br>
+        <button class="tablinks btn btn-lg btn-light m-3" onclick="moveUser('Booking')"> <i class="bi bi-calendar"></i> Book Your Cut</button><br>
     </div>
     
     <script src="bootstrap.min.js"></script>
