@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
     <title>Iron Edge Barbers</title>
 </head>
 
@@ -16,7 +18,7 @@
 
         <img id="barbers-logo" class="rounded" src="assets/edge-barbers.png" alt="Edge Barbers">
         
-        <p class="lead m-4">123 Main Street, Brooklyn, NY 11201</p>
+        <p class="lead m-4"><i class="bi bi-geo-alt-fill me-2"></i>123 Main Street, Brooklyn, NY 11201</p>
         <p class="lead">(555) 123-4567</p>
         <p class="lead">Mon - Sun 8AM – 6PM</p>
     </div>
@@ -24,7 +26,7 @@
     <!-- Barber Profiles -->
     <div class="w-75 m-3">
         <div id="Barbers" class="tabcontent card-body d-flex flex-column align-items-center">
-            <h3 class="display-6">Our Barbers</h3>
+            <h3 class="display-6"> <i class="bi bi-person-badge-fill me-2"></i>Our Barbers</h3>
             <div class="card m-3 w-50 align-items-center">
                 <img id="barber-img" class="card-img-top" src="assets/mike.jpg" alt="Mike “The Blade” Rodriguez">
                 <h4 class="card-text display-7 m-2" id="barber-name">Mike “The Blade” Rodriguez</h4>
@@ -48,7 +50,7 @@
     <!-- Haircut Types -->
     <div class="card w-75 m-5">
         <div id="Haircuts & Services" class="tabcontent m-3 card-body d-flex flex-column align-items-center">
-            <h3 class="display-6">Haircuts / Services</h3>
+            <h3 class="display-6"> <i class="bi bi-scissors me-2"></i>Haircuts / Services</h3>
 
             <!-- Carousel with captions based off from Bootstrap documentation.-->
             <!-- https://getbootstrap.com/docs/5.3/components/carousel/ -->
@@ -100,7 +102,7 @@
     <!-- Booking Information -->
     <div class="card w-75 m-3">
         <div id="Booking" class="tabcontent card-body">
-            <h2 class="card-title display-6">Book Your Cut</h2>
+            <h2 class="card-title display-6"> <i class="bi bi-credit-card-fill me-2"></i>Book Your Cut</h2>
             <form id="booking-form" class="d-flex flex-column">
 
                 <label class="form-label lead" for="barber">Choose your barber:</label><br>
@@ -131,7 +133,7 @@
                 <label class="form-label lead" for="time">Choose a time:</label><br>
                     <input class="input-group w-50 m-1" type="time" id="time-form" name="time" min="08:00" max="18:00" required><br><br>
                 
-                <h5 class="display-7">Contact Information:</h5><br>
+                <h5 class="display-7"> <i class="bi bi-person-lines-fill me-2"></i>Contact Information:</h5><br>
                 <label class="form-label lead" for="contact">Name:</label>
                     <input class="form-control m-1" type="text" id="name-form" name="contact" required><br>
 
