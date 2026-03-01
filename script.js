@@ -16,7 +16,24 @@ paymentForm.addEventListener('submit', function(Event){
 });
 
 function startPayment(){
-    document.getElementById("popup").style.display = "block";
+    const modal = new bootstrap.Modal(document.getElementById('popup'));
+    modal.show();
+
+    // Code to make sure that the modal does not close when the submit button is clicked on.
+    // Make sure to check if the input is valid. Only hide modal once it is valid.
+    document.getElementById("payment-form").addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    const form = this;
+
+    if (!form.checkValidity()) {
+        form.classList.add("was-validated");
+        return;
+    }
+
+    const modal = bootstrap.Modal.getInstance(document.getElementById('popup'));
+    modal.hide();
+});
 }
 
 function makeBooking(){
