@@ -12,6 +12,6 @@ Rachel Olugbemiro (300302892)
 
 Notes:
 
-*Icons were added to the services, experts, payment, address, and user contact information.
+**Icons were added to the services, experts, payment (popup window), address, and user contact information. Matching icons are used on the navbar.**
 
 ## Link:
