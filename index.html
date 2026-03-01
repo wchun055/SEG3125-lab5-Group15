@@ -133,7 +133,7 @@
                 <label class="form-label lead" for="time">Choose a time:</label><br>
                     <input class="input-group w-50 m-1" type="time" id="time-form" name="time" min="08:00" max="18:00" required><br><br>
                 
-                <h5 class="display-7"> <i class="bi bi-person-lines-fill me-2"></i>Contact Information:</h5><br>
+                <h5 class="display-7" style="padding-top: 10pt;"> <i class="bi bi-person-lines-fill me-2"></i>Contact Information:</h5><br>
                 <label class="form-label lead" for="contact">Name:</label>
                     <input class="form-control m-1" type="text" id="name-form" name="contact" required><br>
 
@@ -159,7 +159,7 @@
                     <label class="form-label lead" for="contact">Credit Card Number:</label><br>
                     <form id="payment-form">
                         <input class="input-group" type="tel" id="credit-card-form" name="contact" pattern="^4[0-9]{12}(?:[0-9]{3})?$" placeholder="Number must start with 4, have 12/16 digits." required><br>
-                        <button type="submit" class="btn btn-light align-self-center m-3" onsubmit="makeBooking()" data-bs-dismiss="modal">Book Now</button><br>
+                        <button type="submit" class="btn btn-light align-self-center m-3" onsubmit="makeBooking()">Book Now</button><br>
                     </form>
                 </div>
             </div>
