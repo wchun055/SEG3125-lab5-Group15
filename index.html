@@ -160,7 +160,7 @@
                 <div class="modal-body">
                     <label class="form-label lead" for="contact">Credit Card Number:</label><br>
                     <form id="payment-form">
-                        <input class="input-group" type="tel" id="credit-card-form" name="contact" pattern="^4[0-9]{12}(?:[0-9]{3})?$" placeholder="Number must start with 4, have 12/16 digits." required><br>
+                        <input class="input-group" type="tel" id="credit-card-form" name="contact" pattern="^4[0-9]{11,15}$" placeholder="Number must start with 4, have 12 to 16 digits." required><br>
                         <button type="submit" class="btn btn-light align-self-center m-3" onsubmit="makeBooking()">Book Now</button><br>
                     </form>
                 </div>
