@@ -14,4 +14,4 @@ Notes:
 
 **Icons were added to the services, experts, payment (popup window), address, and user contact information. Matching icons are used on the navbar.**
 
-## Link:
+## Link: https://wchun055.github.io/SEG3125-lab5-Group15/
